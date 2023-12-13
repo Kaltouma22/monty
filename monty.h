@@ -43,11 +43,18 @@ extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
 
 /* file operations */
-void open_file(char *file_name); /*Youssra*/
-int parse_line(char *buffer, int line_number, int format);/*Youssra*/
-void read_file(FILE *);/*Youssra*/
-int len_chars(FILE *);/*Youssra*/
-void find_func(char *, char *, int, int);/*Youssra*/
+void handle_file(char *file_name); /*Done*/
+int parse_line(char *buffer, int line_number, int format);/*Done*/
+int len_chars(FILE *);/*Not yet*/
+void find_fct(char *, char *, int, int);/*Done*/
+void call_fct(op_func, char *, char *, int, int);/*Done*/
+
+/*operations*/
+void add(stack_t **, unsigned int);/*done*/
+void sub(stack_t **, unsigned int);/*done*/
+void div(stack_t **, unsigned int);/*done*/
+void mul(stack_t **, unsigned int);/*done*/
+void modulo(stack_t **, unsigned int);/*done*/
 
 /*Stack operations*/
 stack_t *create_node(int n);/*Kaltoum*/
@@ -56,19 +63,11 @@ void print_stack(stack_t **, unsigned int);/*Kaltoum*/
 void add_to_stack(stack_t **, unsigned int);/*Kaltoum*/
 void add_to_queue(stack_t **, unsigned int);/*Kaltoum*/
 
-void call_fun(op_func, char *, char *, int, int);/*Youssra*/
 
 void print_top(stack_t **, unsigned int);
 void pop_top(stack_t **, unsigned int);
 void nop(stack_t **, unsigned int);
 void swap_nodes(stack_t **, unsigned int);
-
-/*Math operations with nodes*/
-void add_nodes(stack_t **, unsigned int);
-void sub_nodes(stack_t **, unsigned int);
-void div_nodes(stack_t **, unsigned int);
-void mul_nodes(stack_t **, unsigned int);
-void mod_nodes(stack_t **, unsigned int);
 
 /*String operations*/
 void print_char(stack_t **, unsigned int);
