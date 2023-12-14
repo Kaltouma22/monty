@@ -50,11 +50,11 @@ void find_fct(char *, char *, int, int);/*Done*/
 void call_fct(op_func, char *, char *, int, int);/*Done*/
 
 /*operations*/
-void add(stack_t **, unsigned int);/*done*/
-void sub(stack_t **, unsigned int);/*done*/
-void div(stack_t **, unsigned int);/*done*/
-void mul(stack_t **, unsigned int);/*done*/
-void modulo(stack_t **, unsigned int);/*done*/
+void add_func(stack_t **stack, unsigned int line_number); /*done*/
+void sub_func(stack_t **stack, unsigned int line_number); /*done*/
+void div_func(stack_t **stack, unsigned int ln_num); /*done*/
+void mul_func(stack_t **stack, unsigned int ln_num); /*done*/
+void modulo_func(stack_t **stack, unsigned int ln_num); /*done*/
 
 /*Stack operations Kaltoum */
 void push_to_stack(stack_t **new, __attribute__((unused))unsigned int line);
@@ -69,7 +69,7 @@ void add_to_queue(stack_t **, unsigned int);/*Kaltoum*/
 
 void print_top(stack_t **, unsigned int);
 void nop(stack_t **, unsigned int);
-void swap_nodes(stack_t **, unsigned int);
+void sub_nodes(stack_t **, unsigned int);
 
 /*String operations*/
 void print_char(stack_t **, unsigned int);

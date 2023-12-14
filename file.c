@@ -38,14 +38,14 @@ int parse_line(char *buffer, int line_number, int format)
 
 	const char *delim = "\n ";
 
-	//if (buffer == NULL)
-	//	err(4);
+	/* if (buffer == NULL) */
+	/* 	err(4); */
     /**
      * there is no metter if it, it the buffer is null
      * the for loop in the previous function will not be executed 
      * because of the condition 
      * getline(&buffer, &len, fd) != -1
-    */
+     */
 
 	opcode = strtok(buffer, delim);
 	if (opcode == NULL)
@@ -75,17 +75,17 @@ void find_fct(char *opcode, char *value, int ln, int format)
 
 
 	instruction_t func_list[] = {
-		{"push", add_to_stack},
-		{"pall", print_stack},
+		{"push", push_to_stack},
+		{"pall", prt_stack},
 		{"pint", print_top},
-		{"pop", pop_top},
+		{"pop", remove_top},
 		{"nop", nop},
-		{"swap", swap_nodes},
-		{"add", add_nodes},
-		{"sub", sub_nodes},
-		{"div", div_nodes},
-		{"mul", mul_nodes},
-		{"mod", mod_nodes},
+		{"swap", sub_nodes},
+		{"add", add_func},
+		{"sub", sub_func},
+		{"div", div_func},
+		{"mul", mul_func},
+		{"mod", mul_func},
 		{"pchar", print_char},
 		{"pstr", print_str},
 		{"rotl", rotl},
@@ -100,7 +100,7 @@ void find_fct(char *opcode, char *value, int ln, int format)
 	{
 		if (strcmp(opcode, func_list[i].opcode) == 0)
 		{
-			call_fun(func_list[i].f, opcode, value, ln, format);
+			call_fct(func_list[i].f, opcode, value, ln, format);
 			flag = 0;
 		}
 	}
@@ -120,9 +120,7 @@ void find_fct(char *opcode, char *value, int ln, int format)
 void call_fct(op_func func, char *op, char *value, int ln, int format)
 {
 	stack_t *node;
-
 	int flag;
-
 	int i;
 
 	flag = 1;

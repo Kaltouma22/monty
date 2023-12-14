@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * add - adds the top two elements of the stack
+ * add_func - adds the top two elements of the stack
  * @stack: pointer to the stack
  * @line_number: num of the line
  * 
 */
-void add(stack_t **stack, unsigned int line_number)
+void add_func(stack_t **stack, unsigned int line_number)
 {
     int s;
 
@@ -21,13 +21,13 @@ void add(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * sub - subtract the top two elements of the stack
+ * sub_func - subtract the top two elements of the stack
  * @line_number: line's number
  * @stack: ptr to the strack
 */
-void sub(stack_t **stack, unsigned int line_number)
+void sub_func(stack_t **stack, unsigned int line_number)
 {
-    int sub;
+	int sub;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		more_err(8, line_number, "sub");
@@ -40,13 +40,13 @@ void sub(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * div - divise the top to elements of the stack
+ * div_func - divise the top to elements of the stack
  * @stack: ptr to the stack
  * @ln_num: line number
 */
-void div(stack_t **stack, unsigned int ln_num)
+void div_func(stack_t **stack, unsigned int ln_num)
 {
-    int div;
+	int div;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		more_err(8, ln_num, "div");
@@ -59,13 +59,13 @@ void div(stack_t **stack, unsigned int ln_num)
 }
 
 /**
- * mul - multiple the top to elements of the stack
+ * mul_func - multiple the top to elements of the stack
  * @ln_num: line number
  * @stack: ptr to the stack
 */
-void mul(stack_t **stack, unsigned int ln_num)
+void mul_func(stack_t **stack, unsigned int ln_num)
 {
-    int mul;
+	int mul;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		more_err(8, ln_num, "mul");
@@ -78,13 +78,13 @@ void mul(stack_t **stack, unsigned int ln_num)
 }
 
 /**
- * modulo - calculates the modulo of the top two elements of the stack
+ * modulo_func - calculates the modulo of the top two elements of the stack
  * @ln_num: line number
  * @stack: ptr to the stack
 */
-void modulo(stack_t **stack, unsigned int ln_num)
+void modulo_func(stack_t **stack, unsigned int ln_num)
 {
-    int mod;
+	int mod;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		more_err(8, ln_num, "mul");

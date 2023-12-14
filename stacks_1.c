@@ -8,18 +8,18 @@
 
 void push_to_stack(stack_t **new, __attribute__((unused))unsigned int line)
 {
-	if (new_node == NULL || *new_node == NULL)
+	if (new == NULL || *new == NULL)
 		exit(EXIT_FAILURE);
 
 	if (head == NULL)
 	{
-		head = *new_node;
+		head = *new;
 		return;
 	}
 
-	(*new_node)->next = head;
-	head->prev = *new_node;
-	head = *new_node;
+	(*new)->next = head;
+	head->prev = *new;
+	head = *new;
 }
 
 /**
@@ -30,12 +30,13 @@ void push_to_stack(stack_t **new, __attribute__((unused))unsigned int line)
 
 void prt_stack(stack_t **wrt, unsigned int line_num)
 {
+	stack_t *tmp;
+
 	if (wrt == NULL || *wrt == NULL)
 		exit(EXIT_FAILURE);
 
-	(void)line_num; // Unused variable
-
-	stack_t *tmp = *wrt;
+	(void)line_num;
+	tmp = *wrt;
 	while (tmp != NULL)
 	{
 		printf("%d\n", tmp->n);
