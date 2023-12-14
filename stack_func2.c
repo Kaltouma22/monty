@@ -83,7 +83,7 @@ void func_divis_nod(stack_t **divs, unsigned int line)
 	int s;
 
 	if (divs == NULL || *divs == NULL || (*divs)->next == NULL)
-		more_err(8, line_number, "div");
+		more_err(8, line, "div");
 
 	if ((*divs)->n == 0)
 		more_err(9, line);
