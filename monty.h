@@ -50,26 +50,25 @@ void find_fct(char *, char *, int, int);/*Done*/
 void call_fct(op_func, char *, char *, int, int);/*Done*/
 
 /*operations*/
-void add_func(stack_t **stack, unsigned int line_number); /*done*/
-void sub_func(stack_t **stack, unsigned int line_number); /*done*/
-void div_func(stack_t **stack, unsigned int ln_num); /*done*/
 void mul_func(stack_t **stack, unsigned int ln_num); /*done*/
 void modulo_func(stack_t **stack, unsigned int ln_num); /*done*/
 
-/*Stack operations Kaltoum */
-void push_to_stack(stack_t **new, __attribute__((unused))unsigned int line);
-void prt_stack(stack_t **wrt, unsigned int line_num);
-void remove_top(stack_t **rmv, unsigned int line);
-void prnt_stack_top(stack_t **topNode, unsigned int op_line_number);
+/* All Stack operations Kaltoum */
+void push_to_stack(stack_t **, unsigned int); /* K done */
+void prt_my_stack(stack_t **, unsigned int); /* k done */
+void remove_top(stack_t **, unsigned int); /* k done */
+void func_prnt_top(stack_t **, unsigned int); /* k done */
+
+void func_nop(stack_t **, unsigned int); /* k done */
+void func_swap_nd(stack_t **, unsigned int); /* k done */
+void func_adds_nod(stack_t **, unsigned int); /* k done */
+void func_subt_nod(stack_t **, unsigned int); /* k done */
+void func_divis_nod(stack_t **, unsigned int); /* k done */
 
 /* wait */
 stack_t *create_node(int n);/*Kaltoum*/
 void free_nodes(void);/*Kaltoum*/
 void add_to_queue(stack_t **, unsigned int);/*Kaltoum*/
-
-void print_top(stack_t **, unsigned int);
-void nop(stack_t **, unsigned int);
-void sub_nodes(stack_t **, unsigned int);
 
 /*String operations*/
 void print_char(stack_t **, unsigned int);

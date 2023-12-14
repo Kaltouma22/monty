@@ -8,15 +8,13 @@ void handle_file(char *file_name)
 {
 	FILE *fd = fopen(file_name, "r");
 
-    int line_number, format = 0;
-
-    char *buffer = NULL;
-
-    size_t len = 0;
+	int line_number, format = 0;
+	char *buffer = NULL;
+	size_t len = 0;
 
 	if (file_name == NULL || fd == NULL)
 		err(2, file_name);
-    for (line_number = 1; getline(&buffer, &len, fd) != -1; line_number++)
+	for (line_number = 1; getline(&buffer, &len, fd) != -1; line_number++)
 	{
 		format = parse_line(buffer, line_number, format);
 	}
@@ -25,7 +23,7 @@ void handle_file(char *file_name)
 }
 
 /**
- * parse_line - Separates each line into tokens to choose which function to call
+ * parse_line - Separates each line into tokens to choose which func to call
  * @buffer: line from the file
  * @line_number: line number
  * @format: storage format. If 0 Nodes will be entered as a stack.
@@ -76,16 +74,16 @@ void find_fct(char *opcode, char *value, int ln, int format)
 
 	instruction_t func_list[] = {
 		{"push", push_to_stack},
-		{"pall", prt_stack},
-		{"pint", print_top},
+		{"pall", prt_my_stack},
+		{"pint", func_prnt_top},
 		{"pop", remove_top},
-		{"nop", nop},
-		{"swap", sub_nodes},
-		{"add", add_func},
-		{"sub", sub_func},
-		{"div", div_func},
+		{"nop", func_nop},
+		{"swap", func_swap_nd},
+		{"add", func_adds_nod},
+		{"sub", func_subt_nod},
+		{"div", func_divis_nod},
 		{"mul", mul_func},
-		{"mod", mul_func},
+		{"mod", modulo_func},
 		{"pchar", print_char},
 		{"pstr", print_str},
 		{"rotl", rotl},
