@@ -86,8 +86,8 @@ void find_fct(char *opcode, char *value, int ln, int format)
 		{"mod", modulo_func},
 		{"pchar", print_char},
 		{"pstr", print_str},
-		{"rotl", rotl},
-		{"rotr", rotr},
+		{"rotl", rot},
+		{"rotr", rot1},
 		{NULL, NULL}
 	};
 

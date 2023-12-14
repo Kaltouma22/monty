@@ -71,14 +71,14 @@ void free_nodes(void);/*Kaltoum*/
 void add_to_queue(stack_t **, unsigned int);/*Kaltoum*/
 
 /*String operations*/
-void print_char(stack_t **, unsigned int);
-void print_str(stack_t **, unsigned int);
-void rotl(stack_t **, unsigned int);
+void print_char(stack_t **, unsigned int);//done
+void print_str(stack_t **, unsigned int);//done
+void rot(stack_t **, unsigned int);//done
 
 /*Error hanlding*/
-void err(int error_code, ...);
-void more_err(int error_code, ...);
-void string_err(int error_code, ...);
-void rotr(stack_t **, unsigned int);
+void err(int error_code, ...);//done
+void err1(int error_code, ...);//done
+void err2(int error_code, ...);//done
+void rot1(stack_t **, unsigned int);//done
 
 #endif
