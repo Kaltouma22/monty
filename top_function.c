@@ -6,10 +6,10 @@
  * @line_num: The interger representing the line number of the opcode.
  */
 
-void func_prnt_top(stack_t **top, unsigned int line_num)
+void func_prnt_top(stack__t **top, unsigned int line_num)
 {
 	if (top == NULL || *top == NULL)
-		more_err(6, line_num);
+		err1(6, line_num);
 
 	printf("%d\n", (*top)->n);
 }

@@ -6,13 +6,13 @@
  * @line_num: The line number of  the opcode.
  */
 
-void prt_my_stack(stack_t **stk, unsigned int line_num)
+void prt_my_stack(stack__t **stk, unsigned int line_num)
 {
-	stack_t *t;
+	stack__t *t;
 
 	(void) line_num;
 	if (stk == NULL)
-	exit(EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	t = *stk;
 	while (t != NULL)
 	{

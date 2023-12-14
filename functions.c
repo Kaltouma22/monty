@@ -1,4 +1,4 @@
-#include <monty.h>
+#include "monty.h"
 
 /**
  * print_char - prints char 
@@ -6,16 +6,16 @@
  * @ln_num: line number
 */
 
-void print_char(stack_t **stack, unsigned int ln_num)
+void print_char(stack__t **stack, unsigned int ln_num)
 {
 	int ascii;
 
 	if (stack == NULL || *stack == NULL)
-		string_err(11, ln_num);
+		err2(11, ln_num);
 
 	ascii = (*stack)->n;
 	if (ascii < 0 || ascii > 127)
-		string_err(10, ln_num);
+		err2(10, ln_num);
 	printf("%c\n", ascii);
 }
 
@@ -24,11 +24,11 @@ void print_char(stack_t **stack, unsigned int ln_num)
  * @stack: ptr to ptr to top node of the stack.
  * @ln: line number of of the opcode.
  */
-void print_str(stack_t **stack, __attribute__((unused))unsigned int ln)
+void print_str(stack__t **stack)
 {
 	int ascii;
 
-	stack_t *tmp;
+	stack__t *tmp;
 
 	if (stack == NULL || *stack == NULL)
 	{
@@ -53,9 +53,9 @@ void print_str(stack_t **stack, __attribute__((unused))unsigned int ln)
  * @stack: ptr to ptr pointing to top node of the stack.
  * @ln: Interger representing the line number of of the opcode.
  */
-void rot(stack_t **stack, __attribute__((unused))unsigned int ln)
+void rot(stack__t **stack)
 {
-	stack_t *tmp;
+	stack__t *tmp;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		return;
@@ -76,9 +76,9 @@ void rot(stack_t **stack, __attribute__((unused))unsigned int ln)
  * @stack: ptr to ptr pointing to top node of the stack.
  * @ln: Interger representing the line number of of the opcode.
  */
-void rot1(stack_t **stack, __attribute__((unused))unsigned int ln)
+void rot1(stack__t **stack)
 {
-	stack_t *tmp;
+	stack__t *tmp;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		return;
@@ -100,10 +100,10 @@ void rot1(stack_t **stack, __attribute__((unused))unsigned int ln)
  * @stack: Pointer to a pointer pointing to top node of the stack.
  * @line_number: Interger representing the line number of of the opcode.
  */
-void print_top(stack_t **stack, unsigned int line_number)
+void print_top(stack__t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)
-		more_err(6, line_number);
+		err1(6, line_number);
 	printf("%d\n", (*stack)->n);
 }
 

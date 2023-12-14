@@ -6,12 +6,12 @@
  * @num: Interger representing the line number of of the opcode.
  */
 
-void func_subt_nodes(stack_t **subtrac, unsigned int num)
+void func_subt_nodes(stack__t **subtrac, unsigned int num)
 {
 	int totl;
 
 	if (subtrac == NULL || *subtrac == NULL || (*subtrac)->next == NULL)
-		more_err(8, num, "sub");
+		err1(8, num, "sub");
 
 	(*subtrac) = (*subtrac)->next;
 	totl = (*subtrac)->n - (*subtrac)->prev->n;

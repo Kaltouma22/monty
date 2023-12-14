@@ -6,9 +6,9 @@
  * @line: The int representing the line number of the opcode.
  */
 
-void push_to_stack(stack_t **new, __attribute__((unused))unsigned int line)
+void push_to_stack(stack__t **new, __attribute__((unused))unsigned int line)
 {
-	stack_t *tmp;
+	stack__t *tmp;
 
 	if (new == NULL || *new == NULL)
 		exit(EXIT_FAILURE);

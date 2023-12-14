@@ -6,7 +6,7 @@
  * @line_num: The int representing the line number of the opcode.
  */
 
-void func_nop(stack_t **stk, unsigned int line_num)
+void func_nop(stack__t **stk, unsigned int line_num)
 {
         (void)stk;
         (void)line_num;

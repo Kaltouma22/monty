@@ -6,12 +6,12 @@
  * @ln_num: The int representing the line number of the opcode.
  */
 
-void remove_top(stack_t **rmv, unsigned int ln_num)
+void remove_top(stack__t **rmv, unsigned int ln_num)
 {
-	stack_t *tmp;
+	stack__t *tmp;
 
 	if (rmv == NULL || *rmv == NULL)
-		more_err(7, ln_num);
+		err1(7, ln_num);
 
 	tmp = *rmv;
 	*rmv = tmp->next;

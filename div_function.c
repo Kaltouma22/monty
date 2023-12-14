@@ -6,7 +6,7 @@
  * @line: The interger representing the line number of the opcode.
  */
 
-void func_divis_nod(stack_t **divs, unsigned int line)
+void func_divis_nod(stack__t **divs, unsigned int line)
 {
 	int s;
 

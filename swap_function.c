@@ -6,12 +6,12 @@
  * @ln_numb: Interger representing the line number of the opcode.
  */
 
-void func_swap_nd(stack_t **swp, unsigned int ln_numb)
+void func_swap_nd(stack__t **swp, unsigned int ln_numb)
 {
-	stack_t *t;
+	stack__t *t;
 
 	if (swp == NULL || *swp == NULL || (*swp)->next == NULL)
-		more_err(8, ln_numb, "swap");
+		err1(8, ln_numb, "swap");
 	t = (*swp)->next;
 	(*swp)->next = t->next;
 	if (t->next != NULL)

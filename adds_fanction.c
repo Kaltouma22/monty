@@ -6,7 +6,7 @@
  * @ln_numb: Interger representing the line number of of the opcode.
  */
 
-void func_adds_nod(stack_t **adnod, unsigned int ln_numb)
+void func_adds_nod(stack__t **adnod, unsigned int ln_numb)
 {
 	int total;
 
