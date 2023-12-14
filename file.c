@@ -1,6 +1,5 @@
 #include "monty.h"
 
-
 /**
  * handle_file - open and read the file
  * @file_name: file's name
