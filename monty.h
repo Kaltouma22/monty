@@ -56,16 +56,18 @@ void div(stack_t **, unsigned int);/*done*/
 void mul(stack_t **, unsigned int);/*done*/
 void modulo(stack_t **, unsigned int);/*done*/
 
-/*Stack operations*/
+/*Stack operations Kaltoum */
+void push_to_stack(stack_t **new, __attribute__((unused))unsigned int line);
+void prt_stack(stack_t **wrt, unsigned int line_num);
+void remove_top(stack_t **rmv, unsigned int line);
+void prnt_stack_top(stack_t **topNode, unsigned int op_line_number);
+
+/* wait */
 stack_t *create_node(int n);/*Kaltoum*/
 void free_nodes(void);/*Kaltoum*/
-void print_stack(stack_t **, unsigned int);/*Kaltoum*/
-void add_to_stack(stack_t **, unsigned int);/*Kaltoum*/
 void add_to_queue(stack_t **, unsigned int);/*Kaltoum*/
 
-
 void print_top(stack_t **, unsigned int);
-void pop_top(stack_t **, unsigned int);
 void nop(stack_t **, unsigned int);
 void swap_nodes(stack_t **, unsigned int);
 
