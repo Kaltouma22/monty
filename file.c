@@ -13,7 +13,7 @@ void handle_file(char *file_name)
 	size_t len = 0;
 
 	if (file_name == NULL || fd == NULL)
-		err(2, file_name);
+		err2(2, file_name);
 	for (line_number = 1; getline(&buffer, &len, fd) != -1; line_number++)
 	{
 		format = parse_line(buffer, line_number, format);
@@ -37,11 +37,11 @@ int parse_line(char *buffer, int line_number, int format)
 	const char *delim = "\n ";
 
 	/* if (buffer == NULL) */
-	/* 	err(4); */
+	/* err(4); */
     /**
      * there is no metter if it, it the buffer is null
-     * the for loop in the previous function will not be executed 
-     * because of the condition 
+     * the for loop in the previous function will not be executed
+     * because of the condition
      * getline(&buffer, &len, fd) != -1
      */
 
@@ -103,7 +103,7 @@ void find_fct(char *opcode, char *value, int ln, int format)
 		}
 	}
 	if (flag == 1)
-		err(3, ln, opcode);
+		err2(3, ln, opcode);
 }
 
 /**
@@ -130,11 +130,11 @@ void call_fct(op_func func, char *op, char *value, int ln, int format)
 			flag = -1;
 		}
 		if (value == NULL)
-			err(5, ln);
+			err2(5, ln);
 		for (i = 0; value[i] != '\0'; i++)
 		{
 			if (isdigit(value[i]) == 0)
-				err(5, ln);
+				err2(5, ln);
 		}
 		node = create_node(atoi(value) * flag);
 		if (format == 0)

@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * print_char - prints char 
+ * print_char - prints char
  * @stack: ptr to ptr to stack
  * @ln_num: line number
 */

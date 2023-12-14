@@ -4,11 +4,10 @@
  * add_func - adds the top two elements of the stack
  * @stack: pointer to the stack
  * @line_number: num of the line
- * 
 */
 void add_func(stack__t **stack, unsigned int line_number)
 {
-    int s;
+	int s;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		err1(8, line_number, "add");
